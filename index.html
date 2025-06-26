@@ -2,170 +2,184 @@
 <html lang="tr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Benim Web Sitem</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benim Web Sitem</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #fdf6e3;
+        }
 
-  <style>
-    /* Genel sayfa ayarları */
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #fdf6e3;
-    }
+        .ust-bar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 8px 16px;
+            font-size: 14px;
+            z-index: 1000;
+        }
 
-    /* Sabit üst bar */
-    .ust-bar {
-      position: sticky;
-      top: 0;
-      background-color: #333;
-      color: white;
-      padding: 8px 16px;
-      font-size: 14px;
-      z-index: 1000;
-      text-align: center;
-    }
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: #333;
+        }
 
-    /* Başlıklar */
-    h1, h3 {
-      text-align: center;
-      color: #333;
-      margin: 20px 0 10px 0;
-    }
+        .video-row {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
 
-    /* video-row: tam ekran yan yana videolar */
-    .video-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      width: 100vw;
-      height: 100vh;
-    }
+        .video-row iframe {
+            flex: 1;
+            border: none;
+            height: 100%;
+        }
 
-    .video-row iframe {
-      flex: 1;
-      max-width: 600px;
-      height: 100%;
-      border: none;
-    }
+        @media (max-width: 768px) {
+            .video-row {
+                flex-direction: column;
+            }
 
-    @media (max-width: 768px) {
-      .video-row {
-        flex-direction: column;
-        height: auto;
-      }
+            .video-row iframe {
+                width: 100%;
+                height: 50vh;
+            }
+        }
 
-      .video-row iframe {
-        width: 100%;
-        height: 50vh;
-        max-width: none;
-      }
-    }
+        .efektli-gorsel {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
 
-    /* Bölüm içeriği */
-    section.bolum {
-      padding: 20px;
-    }
-
-    /* Açıklama metni */
-    .aciklama {
-      max-width: 900px;
-      margin: 10px auto 40px auto;
-      font-size: 18px;
-      color: #444;
-      text-align: center;
-    }
-  </style>
+        .grup {
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
-
-  <div class="ust-bar">
-    YAZAR: ARZUNUR ÇAKMAK | 2022950512
-    <a href="Rezonansın sarkaç ile gözlemi.pdf" target="_blank" title="PDF'yi Aç" style="color:#fff; margin-left: 10px;">
-      📎
-    </a>
-  </div>
-
-  <section class="parallax-bolum">
-    <div class="parallax-icerik">
-      <h1>ÖZEL EĞİTİM SINIFLARI İÇİN BİLİM ETKİNLİKLERİ GELİŞTİRME</h1>
-      <h3>Bu site, tasarladığım deneyin karşılaştırmalı videolarını içerir</h3>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
     </div>
-  </section>
 
-  <section class="bolum bir">
-    <p>
-      Bilim yapmak; ister çocuk olsun ister bilimin sınırlarında araştırma yapan biri olsun, temelde aynı
-      yöntemle çalışmaktadır. Herkes bilim yaparak, farklı düzeylerde araştırma yoluyla bilgi edinme sürecine
-      tanıklık edebilir. Erken yaşlarda çocuklarda bilim uğraşı; genel anlamda çocukların kendilerinin de
-      içinde var olduğu doğayı ve yaşamı doğru algılamalarına ve anlamalarına yöntemsel olarak destek olmaktır
-      (Yürümezoğlu & Karabey, 2020). Rezonans, dışarıdan gelen ve küçük genlikle titreşen bir etmenin,
-      sistemin serbest halde titreşeceği frekansa denk gelerek, sistemi kararlı bir durumda büyük genlikle titreşmeye zorladığı bir durumdur. (Chen et al., 2025)
-    </p>
-    <p>
-      Rezonans olgusunun algılanmasının zor olması sebebiyle çeşitli deneylere gerek duyulur.
-      Bu deneylere örnek olarak 'Yerinden Zıplatan Deneyler', 'Bir Metronomun Rezonans Yoluyla Bir Sarkacı Titreşime Geçirmesi' deneyleri verilebilir.
-    </p>
-    <p>
-      Hazırlamış olduğum deney de Rezonansın gözlemlenmesine imkan tanıyan bir deneydir.
-    </p>
-  </section>
-
-  <section class="bolum iki icerik-kutu">
-    <h2 style="text-align:center;">Nelere İhtiyacımız Var</h2>
-    <ul style="max-width: 600px; margin: 10px auto; list-style-type: disc;">
-      <li>İkea Ev Süsü</li>
-      <li>Tahta Cetvel</li>
-      <li>Plastik Cetvel</li>
-      <li>Mengene</li>
-    </ul>
-  </section>
-
-  <!-- Videolar tam ekran yan yana -->
-
-  <div class="video-row">
-    <iframe src="https://www.youtube.com/embed/8caeApRLuz8" title="YouTube Shorts 1"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/KmC4E8ZdgBI" title="YouTube Shorts 2"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-row">
-    <iframe src="https://www.youtube.com/embed/Gt7_4Ic4ObU" title="YouTube Shorts 3"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/zVz5DyCp-H8" title="YouTube Shorts 4"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-row">
-    <iframe src="https://www.youtube.com/embed/G7FleCll1RY" title="YouTube Shorts 5"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/r4hf_t_5FJk" title="YouTube Shorts 6"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <section class="bolum alti">
-    <div class="grup">
-      <h3>Tahta Cetvel ve Plastik Cetvel - 20 cm</h3>
-
-      <div class="video-row">
-        <iframe src="https://www.youtube.com/embed/8caeApRLuz8" title="Tahta Cetvel Video 1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/KmC4E8ZdgBI" title="Plastik Cetvel Video 2"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-
-      <p class="aciklama">
-        Bu videolarda salınımın 20 cm cetvel uzunluğu için nasıl değiştiği gözlemlenebilir.
-      </p>
+    <div class="ust-bar">
+        YAZAR: ARZUNUR ÇAKMAK | 2022950512
+        <a href="Rezonansın sarkaç ile gözlemi.pdf" class="pdf-link" target="_blank" title="PDF'yi Aç">📌</a>
     </div>
-  </section>
 
+    <section class="parallax-bolum">
+        <div class="parallax-icerik">
+            <h1>ÖZEL EĞİTİM SINIFLARI İÇİN BİLİM ETKİNLİKLERİ GELİŞTİRME </h1>
+            <h3>Bu site, tasarladığım deneyin karşılaştırmalı videolarını içerir</h3>
+        </div>
+    </section>
+
+    <section class="bolum bir">
+        <p>
+            Bilim yapmak; ister çocuk olsun ister bilimin sınırlarında araştırma yapan biri olsun, temelde aynı
+            yöntemle çalışmaktadır. Herkes bilim yaparak, farklı düzeylerde araştırma yoluyla bilgi edinme sücrecine
+            tanıklık edebilir. Erken yaşlarda çocuklarda bilim uğraşı; genel anlamda çocukların kendilerinin de
+            içinde var olduğu doğayı ve yaşamı doğru algılamalarına ve anlamalarına yöntemsel olarak destek olmaktır
+            (Yürümezoğlu & Karabey, 2020).
+            Rezonans, dışarıdan gelen ve küçük genlikle titreşen bir etmenin, sistemin serbest halde titreşeceği
+            frekansa denk gelerek, sistemi kararlı bir durumda büyük genlikle titreşmeye zorladığı bir durumdur.
+            (Chen et al., 2025)
+        </p>
+
+        <p>
+            Rezonans olgusunun algılanmasının zor olması sebebiyle çeşitli deneylere gerek duyulur. Bu deneylere örnek
+            olarak
+            'Yerinden Zıplatan Deneyler', 'Bir Metronomun Rezonans Yoluyla Bir Sarkacı Titreşime Geçirmesi'
+            deneyleri verilebilir.
+        </p>
+
+        <p>
+            Hazırlamış olduğum deney de Rezonansın gözlemlenmesine imkan tanıyan bir deneydir.
+        </p>
+    </section>
+
+    <section class="bolum iki icerik-kutu">
+        <h2>Nelere İhtiyacımız Var</h2>
+        <div class="malzeme-listesi">
+
+            <!-- Sol sütun -->
+            <div class="sutun">
+                <div class="malzeme">
+                    <p>Tahta Cetvel</p>
+                    <img src="hatas-tahta-cetvel-50-cm-00048-122993-13-K-8263.jpg" alt="Tahta Cetvel"
+                        class="efektli-gorsel" />
+                </div>
+
+                <div class="malzeme">
+                    <p>İkea Ev Süsü</p>
+                    <img src="IMG_5466.jpg" alt="İkea Süsü" class="efektli-gorsel" />
+                </div>
+
+            </div>
+
+            <!-- Sağ sütun -->
+            <div class="sutun">
+                <div class="malzeme">
+                    <p>Plastik Cetvel</p>
+                    <img src="hatas-genis-plastik-cetvel-30cm-cetvel-hatas-indirimli-106482-49-B.jpg"
+                        alt="Plastik Cetvel" class="efektli-gorsel" />
+                </div>
+                <div class="malzeme">
+                    <p>Mengene</p>
+                    <img src="IMG_5465.jpg" alt="Mengene" class="efektli-gorsel" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bolum uc">
+        <h3>Tahta Cetvel ve Plastik Cetvel 50 cm</h3>
+        <div class="video-row">
+            <iframe src="https://www.youtube.com/embed/KmC4E8ZdgBI" title="YouTube Shorts 1" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/8caeApRLuz8" title="YouTube Shorts 2" allowfullscreen></iframe>
+        </div>
+        <p>Bu videolarda salınımın 50 cm cetvel uzunluğu için nasıl değiştiği gözlemlenebilir.</p>
+    </section>
+
+    <section class="bolum dort">
+        <h3>Tahta Cetvel ve Plastik Cetvel 40 cm</h3>
+        <div class="video-row">
+            <iframe src="https://www.youtube.com/embed/zVz5DyCp-H8" title="YouTube Shorts 3" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Gt7_4Ic4ObU" title="YouTube Shorts 4" allowfullscreen></iframe>
+        </div>
+        <p>Bu videolarda salınımın 40 cm cetvel uzunluğu için nasıl değiştiği gözlemlenebilir.</p>
+    </section>
+
+    <section class="bolum bes">
+        <h3>Tahta Cetvel ve Plastik Cetvel 30 cm</h3>
+        <div class="video-row">
+            <iframe src="https://www.youtube.com/embed/G7FleCll1RY" title="YouTube Shorts 5" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/r4hf_t_5FJk" title="YouTube Shorts 6" allowfullscreen></iframe>
+        </div>
+        <p>Bu videolarda salınımın 30 cm cetvel uzunluğu için nasıl değiştiği gözlemlenebilir.</p>
+    </section>
+
+    <section class="bolum altı">
+        <h3>Tahta Cetvel ve Plastik Cetvel 20 cm</h3>
+        <div class="video-row">
+            <iframe src="https://www.youtube.com/embed/KmC4E8ZdgBI" title="YouTube Shorts 5" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/8caeApRLuz8" title="YouTube Shorts 6" allowfullscreen></iframe>
+        </div>
+        <p>Bu videolarda salınımın 20 cm cetvel uzunluğu için nasıl değiştiği gözlemlenebilir.</p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
